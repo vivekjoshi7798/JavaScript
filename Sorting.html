@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html><body>
+    <h1>Sorting Element</h1>
+        Numbers : <input type="text" name="n1">
+        <input type="button" id="Click" onclick="sort()"  value="Sort Number">
+    <p id="sortn"></p>
+    <script>
+        function sort(){
+        const numbers=document.getElementsByName("n1");
+        const arrayofNum=numbers[0].value.toString().split(",");
+        length = arrayofNum.length;
+        var numberArray = [];
+        for (var i = 0; i < length; i++)
+            numberArray.push(parseInt(arrayofNum[i]));
+        numberArray.sort(function(a,b){return a-b})
+        document.getElementById("sortn").innerHTML=numberArray;
+        }
+    </script>
+</body></html>  
