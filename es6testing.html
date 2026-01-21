@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<title>ES6 Testing</title>
+<body>
+  
+<div id="demo"></div>
+<div id="demo1"></div>
+<div id="demo2"></div>
+
+<script>
+
+const myvehicle = {
+  brand: "Ford",
+  model: "Mustang",
+  color: "red",
+  year: 1969
+}
+
+const vehicle = {
+  wheels: "four",
+  color: "black"
+
+}
+
+const mycar={...myvehicle, ...vehicle}
+
+    const html = `
+  <div>
+    <h1>Title</h1>
+    <p>Paragraph</p>
+  </div>
+`;
+
+
+class Laptop {
+  constructor(name) {
+    this.brand = name;
+    console.log("Laptop constructor called");
+  }
+}
+
+class GamingLaptop extends Laptop {
+  
+    constructor(name) {
+    super(name);
+    console.log("GamingLaptop constructor called");
+  }
+
+  hello = () => {
+    return "Hello from GamingLaptop";
+  }
+
+  hello2() {
+    return "Hello2 from GamingLaptop";
+  }
+
+  hello3=function(x){
+    return "Hello3 from GamingLaptop"+ x;
+  }
+
+hello4 = (x) =>     "Hello4 from GamingLaptop" +x;
+  
+hello5 =() =>     {
+    
+const name = "John";
+const age = 30;
+const message = "Hello, " + name + "!\n" + 
+"You are " + age + " years old.";
+
+return message;
+
+}
+
+authenticateUser= (user,pass) => {
+        return (user === "admin" && pass === "password" ? this.renderAPP() : this.renderLogin());
+    }
+
+renderLogin= () => {
+  return "<h1>Please try logging in again.</h1>";
+}
+
+renderAPP= () => {
+    return "<h1>Welcome to the Gaming Laptop Application!</h1>";
+}
+
+
+
+
+
+}
+
+const mylaptop = new Laptop("Dell");
+document.write(mylaptop.brand);
+
+const mygaminglaptop = new GamingLaptop("Asus");
+document.write("<br><h1>" + mygaminglaptop.brand + "</h1><br>");
+document.write("<br><h1>" + mygaminglaptop.hello() + "</h1><br>");
+document.write("<br><h1>" + mygaminglaptop.hello2() + "</h1><br>");
+document.write("<br><h1>" + mygaminglaptop.hello3(10) + "</h1><br>");
+document.write("<br><h1>" + mygaminglaptop.hello4(20) + "</h1><br>");
+document.write("<br><h1>" + mygaminglaptop.hello5() + "</h1><br>");
+document.getElementById("demo").innerHTML = html;
+document.getElementById("demo1").innerHTML = JSON.stringify(mycar,null,2);
+document.getElementById("demo2").innerHTML = mygaminglaptop.authenticateUser("admin","password");
+
+
+</script>
+
+</body>
+</html>
